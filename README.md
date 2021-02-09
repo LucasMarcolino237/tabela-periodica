@@ -1,2 +1,0 @@
-# tabela-periodica
- 
