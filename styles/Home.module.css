@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+.header {
+  border-bottom: 2px solid red;
+}
+
+.nav {
+  display: flex;
+}
+
 .main {
   padding: 5rem 0;
   flex: 1;
