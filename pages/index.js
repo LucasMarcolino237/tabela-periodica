@@ -27,17 +27,30 @@ export default function Home() {
       </header>
 
       <main className={styles.main}>
-        
+        <aside>
+          <h1>props</h1>
+          <section>
+            <p>description</p>
+          </section>
+        </aside>
+        <article>
+          <h1>Periodic table</h1>
+          <section>
+            <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+            </ul>
+          </section>
+        </article>
       </main>
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://github.com/LucasMarcolino237"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          <address>Powered by Lucas Marcolino</address>
         </a>
       </footer>
     </div>
