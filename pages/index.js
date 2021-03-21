@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Periodic table</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -14,12 +14,12 @@ export default function Home() {
           <nav className={styles.nav}>
             <div className={styles.card}>
               <p>
-                teste 1
+                test 1
               </p>
             </div>
             <div className={styles.card}>
               <p>
-                teste 2
+                test 2
               </p>
             </div>
           </nav>
@@ -37,7 +37,9 @@ export default function Home() {
           <h1>Periodic table</h1>
           <section>
             <ul>
-              <li>item 1</li>
+              <li>
+                <a href='/table/Hydrogen'>Hydrogen</a>
+              </li>
               <li>item 2</li>
             </ul>
           </section>
@@ -56,3 +58,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home;
