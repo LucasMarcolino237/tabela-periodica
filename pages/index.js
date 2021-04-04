@@ -6,20 +6,32 @@ import Link from 'next/link';
 function Home({ periodicTable = {} } ) {
     function showElements() {
         return (
-            <ul>
-                { periodicTable.map(element => {
-                    
-                    // return (<li> { element.name } </li>)
-                    return (
-                        <li>
-                            <Link href={ `/table/${encodeURIComponent(element.name)}` }>
-                                <a>{ element.name }</a>
-                            </Link>
-                        </li>)
-                }) }
-            </ul>
-        )
+            <div class={styles.elements}>
 
+                { periodicTable.map(element => {
+                                        
+                    let { name, symbol, atomicNumber, atomicMass, groupBlock } = element;
+                    const group = groupBlock;
+
+                    // return (<li> { element.name } </li>)
+                    if (name === "Technetium") atomicMass = "98";
+                    if (name === "Promethium") atomicMass = "145";
+                    return (
+                    <Link href={ `/table/${encodeURIComponent(name)}` }>
+                        <div class={styles.elementCard}>
+                            <h4 class="number">{ atomicNumber }</h4>
+                            <h1 class="symbol">{ symbol }</h1>
+                            <spam class="mass">{ atomicMass }</spam>
+                            <h3 class="name">{ name }</h3>
+                            <small class="group">Group: <span>{group}</span></small>
+                        </div>
+                    </Link>
+                    
+                    )}
+                )}
+
+            </div>
+        )
     }
     
     return (

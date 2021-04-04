@@ -16,14 +16,14 @@ module.exports = {
     async getElementBy(searchType, elementName) {
         searchType = searchType.capitalize();
 
-        const validSearchType = [
-            'Number',
-            'Name',
-            'Symbol',
-            'Bonding',
-            'Group',
-            'State',
-        ]
+        // const validSearchType = [
+        //     'Number',
+        //     'Name',
+        //     'Symbol',
+        //     'Bonding',
+        //     'Group',
+        //     'State',
+        // ]
 
         const res = await axios.get(`https://periodic-table-api.herokuapp.com/atomic${searchType}/${elementName}`);
         const elementInfo = res.data;
