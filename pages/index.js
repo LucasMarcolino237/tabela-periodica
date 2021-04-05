@@ -6,7 +6,7 @@ import Link from 'next/link';
 function Home({ periodicTable = {} } ) {
     function showElements() {
         return (
-            <div class={styles.elements}>
+            <div className={styles.elements}>
 
                 { periodicTable.map(element => {
                                         
@@ -16,16 +16,15 @@ function Home({ periodicTable = {} } ) {
                     // return (<li> { element.name } </li>)
                     if (name === "Technetium") atomicMass = "98";
                     if (name === "Promethium") atomicMass = "145";
+                    // if (group === "")
                     return (
-                    <Link href={ `/table/${encodeURIComponent(name)}` }>
-                        <div class={styles.elementCard}>
-                            <h4 class="number">{ atomicNumber }</h4>
-                            <h1 class="symbol">{ symbol }</h1>
-                            <spam class="mass">{ atomicMass }</spam>
-                            <h3 class="name">{ name }</h3>
-                            <small class="group">Group: <span>{group}</span></small>
+                        <div className={styles.elementCard} id={atomicNumber}>
+                            {/* <h4 className={styles.number}>{ atomicNumber }</h4> */}
+                            <h1 className={styles.symbol}>{ symbol }</h1>
+                            {/* <spam className={styles.mass}>{ atomicMass }</spam> */}
+                            <h3 className={styles.name}>{ name }</h3>
+                            {/* <small className={styles.group}>Group: <span>{group}</span></small> */}
                         </div>
-                    </Link>
                     
                     )}
                 )}
