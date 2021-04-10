@@ -14,9 +14,9 @@ function Home({ periodicTable = {} } ) {
                     const group = groupBlock;
 
                     // return (<li> { element.name } </li>)
-                    if (name === "Technetium") atomicMass = "98";
-                    if (name === "Promethium") atomicMass = "145";
-                    // if (group === "")
+                    if (group === "lanthanoid" || group === "actinoid") {
+                        return 
+                    }
                     return (
                         <div className={styles.elementCard} id={atomicNumber}>
                             {/* <h4 className={styles.number}>{ atomicNumber }</h4> */}

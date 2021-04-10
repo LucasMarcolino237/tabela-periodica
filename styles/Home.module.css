@@ -84,7 +84,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  /* max-width: 800px; */
   margin-top: 3rem;
 }
 
@@ -134,16 +134,24 @@
   grid-column-start: -2;
 }
 
-.elementCard#\33, 
-.elementCard#\35 {
+.elementCard#\33{
+  grid-column-start: 1;
+} 
+
+.elementCard#\35,
+.elementCard#\31 3 {
   grid-column-start: 13;
 }
 
 .elementCard#\37 2,
 .elementCard#\31 04 {
-  grid-column-start: 4;
-  
+  grid-column-start: 4; 
 }
+
+.elementCard#\35 6,
+.elementCard#\38 8  {
+  grid-column-start: 2;
+} 
 
 .elementCard .symbol {
   font: 700 34px/1.3 "Poppins", sans-serif;
