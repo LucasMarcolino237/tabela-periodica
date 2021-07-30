@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { getAllElements } from '../utils/table-info.js';
-// import Link from 'next/link';
+import Link from 'next/link';
 
 function Home({ periodicTable = {} } ) {
     function showElements() {
@@ -15,18 +15,18 @@ function Home({ periodicTable = {} } ) {
                     const id = atomicNumber;
 
                     const css = {
-                        2:styles.elementCard2,
-                        3:styles.elementCard3,
-                        5:styles.elementCard5,
-                        13:styles.elementCard13,
-                        72:styles.elementCard72,
-                        104:styles.elementCard104,
-                        56:styles.elementCard56,
-                        88:styles.elementCard88,
+                        2:styles.elementContainer2,
+                        3:styles.elementContainer3,
+                        5:styles.elementContainer5,
+                        13:styles.elementContainer13,
+                        72:styles.elementContainer72,
+                        104:styles.elementContainer104,
+                        56:styles.elementContainer56,
+                        88:styles.elementContainer88,
                     };
                     
                     const currentCSS = (id) => {
-                        if (css[`${id}`]) { return css[`${id}`] } else { return styles.elementCard };
+                        if (css[`${id}`]) { return css[`${id}`] } else { return styles.elementContainer };
                     };
 
                     // return (<li> { element.name } </li>)
@@ -35,13 +35,17 @@ function Home({ periodicTable = {} } ) {
                     
                     return (
                         
-                        <div className={currentCSS(id)}>
-                            <h4 className={styles.number}>{ atomicNumber }</h4>
-                            <h1 className={styles.symbol}>{ symbol }</h1>
-                            <spam className={styles.mass}>{ atomicMass }</spam>
-                            <h3 className={styles.name}>{ name }</h3>
-                        </div>
-                    
+                        <Link href={`/table/${name}`}>
+                            <a  className={currentCSS(id)}>    
+                                <div className={styles.elementCard}>
+                                    <h4 className={styles.number}>{ atomicNumber }</h4>
+                                    <h1 className={styles.symbol}>{ symbol }</h1>
+                                    <spam className={styles.mass}>{ atomicMass }</spam>
+                                    <h3 className={styles.name}>{ name }</h3>
+                                </div>
+                            </a>
+                        </Link>
+                            
                     )}
                 )};
 

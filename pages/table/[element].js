@@ -9,7 +9,7 @@ function Element( { elementInfo = {} }) {
 
     return (
         <div>
-            <Link href='/'>
+            <Link href='../../'>
                 <a>Home</a>
             </Link>
             <table border='1px solid black'>
