@@ -1,53 +1,14 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { getAllElements } from '../utils/table-info.js';
-import Link from 'next/link';
+import madeElementCard from '../utils/madeElementCard';
 
 function Home({ periodicTable = {} } ) {
     function showElements() {
         return (
             <section className={styles.grid}>
 
-                { periodicTable.map(element => {
-                                        
-                    const { name, symbol, atomicNumber, atomicMass, groupBlock } = element;
-                    const group = groupBlock;
-                    const id = atomicNumber;
-
-                    const css = {
-                        2:styles.elementContainer2,
-                        3:styles.elementContainer3,
-                        5:styles.elementContainer5,
-                        13:styles.elementContainer13,
-                        72:styles.elementContainer72,
-                        104:styles.elementContainer104,
-                        56:styles.elementContainer56,
-                        88:styles.elementContainer88,
-                    };
-                    
-                    const currentCSS = (id) => {
-                        if (css[`${id}`]) { return css[`${id}`] } else { return styles.elementContainer };
-                    };
-
-                    // return (<li> { element.name } </li>)
-                    if (group === "lanthanoid" || group === "actinoid" || name === "Lawrencium") return; 
-
-                    
-                    return (
-                        
-                        <Link href={`/table/${name}`}>
-                            <a  className={currentCSS(id)}>    
-                                <div className={styles.elementCard}>
-                                    <h4 className={styles.number}>{ atomicNumber }</h4>
-                                    <h1 className={styles.symbol}>{ symbol }</h1>
-                                    <spam className={styles.mass}>{ atomicMass }</spam>
-                                    <h3 className={styles.name}>{ name }</h3>
-                                </div>
-                            </a>
-                        </Link>
-                            
-                    )}
-                )};
+                { periodicTable.map(element => { return madeElementCard(element) }) } 
 
             </section>
         )
@@ -78,15 +39,15 @@ function Home({ periodicTable = {} } ) {
         </header>
 
         <main className={styles.main}>
-            <aside className={styles.code}>
+            {/* <aside className={styles.code}>
             <h1>props</h1>
             <section className={styles.description}>
                 <p>description</p>
             </section>
-            </aside>
+            </aside> */}
             <article>
                 <h1 className={styles.title}>Periodic table</h1>
-                { showElements() }
+                <div>{ showElements() }</div>
             </article>
         </main>
 
@@ -102,6 +63,7 @@ function Home({ periodicTable = {} } ) {
         </div>
     )
 };
+
 export async function getStaticProps(context) {
     const data = await getAllElements();
 
@@ -109,4 +71,5 @@ export async function getStaticProps(context) {
         props: { periodicTable: data },
     };
 };
+
 export default Home;

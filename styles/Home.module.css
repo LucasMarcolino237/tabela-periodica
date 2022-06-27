@@ -1,5 +1,5 @@
 .container {
-  min-height: 100vh;
+  /* max-width: 100vh; */
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
 }
 
 .footer {
-  width: 100%;
+  /* width: 100vw; */
   height: 100px;
   border-top: 1px solid #eaeaea;
   display: flex;
@@ -54,8 +54,8 @@
 }
 
 .title {
-  margin: 0;
-  line-height: 1.15rem;
+  margin: 0.5rem;
+  line-height: 3.2rem;
   font-size: 4rem;
 }
 
@@ -65,6 +65,7 @@
 }
 
 .description {
+  width: 10vw;
   line-height: 1.5;
   font-size: 1.5rem;
 }
@@ -84,9 +85,9 @@
 
   
 	grid-template-columns: repeat(17, auto) 1fr;
-  width: 90%;
+  /* width: 70vw; */
 	margin: auto;
-	max-width: 100%;
+	max-width: 100vw;
 }
 
 .card {
@@ -101,22 +102,9 @@
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.elementCard {
-  margin: 0.6rem;
-  flex-basis: 45%;
-  padding: 0.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #74da85;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
 .card:hover,
 .card:focus,
-.card:active,
-.elementCard:hover {
+.card:active {
   color: #0070f3;
   border-color: #0070f3;
 }
@@ -136,66 +124,7 @@
   height: 1em;
 }
 
-.elementContainer {
-  padding: 4px;
-	position: relative;
-	z-index: 1;
-	cursor: default;
-	transition: all 0.3s ease;
-}
 
-.elementContainer2 {
-  grid-column-start: -2;
-}
-
-.elementContainer3{
-  grid-column-start: 1;
-} 
-
-.elementContainer5,
-.elementContainer13 {
-  grid-column-start: 13;
-}
-
-.elementContainer72,
-.elementContainer104 {
-  grid-column-start: 4; 
-}
-
-.elementContainer56,
-.elementContainer88  {
-  grid-column-start: 2;
-} 
-
-.elementCard .symbol {
-  font: 700 2.2rem "Poppins", sans-serif;
-  margin: 0.2rem 3.2rem;
-  text-align: center;
-}
-
-/* .elementCard .number {
-  background-color: rgba(0, 0, 0, 0.1);
-	border-radius: 10px;
-	font-size: 0.8em;
-	padding: 5px 10px;
-}
-*/
-.elementCard .name {
-  font: 500 1.2rem "Poppins", sans-serif;
-  margin-top: -0.2em;
-}  
-
-.elements {
-  display: grid;
-	grid-template-columns: repeat(17, auto) 1fr;
-  width: 90%;
-	margin: auto;
-	max-width: 100%;
-}
-
-.elementCard:hover {
-  cursor: pointer;
-}
 
 /* @media (max-width: 600px) {
   .grid {

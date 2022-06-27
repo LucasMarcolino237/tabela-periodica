@@ -1,0 +1,81 @@
+.elementContainer {
+    padding: 4px;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+    width: 4rem;
+    height: min-content;
+}
+
+.elementContainer2 {
+    grid-column-start: -2;
+    padding: 4px;
+}
+
+.elementContainer3{
+    grid-column-start: 1;
+    padding: 4px;
+} 
+
+.elementContainer5,
+.elementContainer13 {
+    grid-column-start: 13;
+    padding: 4px;
+}
+
+.elementContainer72,
+.elementContainer104 {
+    grid-column-start: 4; 
+    padding: 4px;
+}
+
+.elementContainer56,
+.elementContainer88  {
+    grid-column-start: 2;
+    padding: 4px;
+} 
+
+.elementCard {
+    box-sizing: unset;
+    flex-basis: 45%;
+    padding: 4px;
+    /* text-align: left; */
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #74da85;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}  
+
+.elementCard .symbol {
+    font: 700 1rem "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+}
+
+.elementCard .number {
+    border-radius: 10px;
+    font-size: 0.6em;
+    padding: 0;
+    margin: 0;
+}
+
+.elementCard .name {
+    font: 500 0.5rem "Poppins", sans-serif;
+    margin: 0;
+}
+
+.elementCard .mass {
+    font: 500 0.5rem "Poppins", sans-serif;
+    margin: 0;
+}
+
+.elementCard:hover {
+    cursor: pointer;
+
+    color: #0070f3;
+    border-color: #0070f3;
+}
