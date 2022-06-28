@@ -41,11 +41,9 @@
     flex-basis: 45%;
     padding: 4px;
     /* text-align: left; */
-    color: inherit;
+    /* color: inherit; */
     text-decoration: none;
-    border: 1px solid #74da85;
-    border-radius: 10px;
-    transition: color 0.15s ease, border-color 0.15s ease;
+    
 }  
 
 .elementCard .symbol {
@@ -78,4 +76,60 @@
 
     color: #0070f3;
     border-color: #0070f3;
+}
+
+.nonmetal {
+    color: #008000;
+    border: 2px solid #008000;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nobleGas {
+    color: #0000ff;
+    border: 2px solid #0000ff;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.alkaliMetal {
+    color: #FFA500;
+    border: 2px solid #FFA500;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.alkaliEarthMetal {
+    color: #ffff00;
+    border: 2px solid #ffff00;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.metalloid {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.transitionMetal {
+    color: #ff007f;
+    border: 2px solid #ff007f;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.metal {
+    color: #03bb85;
+    border: 2px solid #03bb85;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.postTrasitionMetal {
+    color: #03bb85;
+    border: 2px solid #03bb85;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
 }

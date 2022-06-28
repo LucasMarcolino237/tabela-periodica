@@ -46,7 +46,7 @@ function Home({ periodicTable = {} } ) {
             </section>
             </aside> */}
             <article>
-                <h1 className={styles.title}>Periodic table</h1>
+                <h1 className={styles.title}>PERIODIC TABLE</h1>
                 <div>{ showElements() }</div>
             </article>
         </main>
