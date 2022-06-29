@@ -1,52 +1,78 @@
 .elementContainer {
     padding: 4px;
+    margin: 0.2rem auto;
     position: relative;
     z-index: 1;
     cursor: default;
     transition: all 0.3s ease;
-    width: 4rem;
-    height: min-content;
+    width: 4.5rem;
+    height:4.5rem;
 }
 
 .elementContainer2 {
     grid-column-start: -2;
     padding: 4px;
+    margin: 0.2rem auto;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+    width: 4.5rem;
+    height:4.5rem;
 }
 
 .elementContainer3{
     grid-column-start: 1;
     padding: 4px;
+    margin: 0.2rem auto;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+    width: 4.5rem;
+    height:4.5rem;
 } 
 
 .elementContainer5,
 .elementContainer13 {
     grid-column-start: 13;
     padding: 4px;
+    margin: 0.2rem auto;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+    width: 4.5rem;
+    height:4.5rem;
 }
 
 .elementContainer72,
 .elementContainer104 {
     grid-column-start: 4; 
     padding: 4px;
+    margin: 0.2rem auto;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+    width: 4.5rem;
+    height:4.5rem;
 }
 
 .elementContainer56,
 .elementContainer88  {
     grid-column-start: 2;
     padding: 4px;
+    margin: 0.2rem auto;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+    width: 4.5rem;
+    height:4.5rem;
 } 
 
-.elementCard {
-    box-sizing: unset;
-    flex-basis: 45%;
-    padding: 4px;
-    /* text-align: left; */
-    /* color: inherit; */
-    text-decoration: none;
-    
-}  
-
-.elementCard .symbol {
+.symbol {
     font: 700 1rem "Poppins", sans-serif;
     margin: 0;
     padding: 0;
@@ -54,28 +80,21 @@
     align-items: center;
 }
 
-.elementCard .number {
+.number {
     border-radius: 10px;
     font-size: 0.6em;
     padding: 0;
     margin: 0;
 }
 
-.elementCard .name {
+.name {
     font: 500 0.5rem "Poppins", sans-serif;
     margin: 0;
 }
 
-.elementCard .mass {
+.mass {
     font: 500 0.5rem "Poppins", sans-serif;
     margin: 0;
-}
-
-.elementCard:hover {
-    cursor: pointer;
-
-    color: #0070f3;
-    border-color: #0070f3;
 }
 
 .nonmetal {
@@ -83,12 +102,35 @@
     border: 2px solid #008000;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
+
+    box-sizing: unset;
+    flex-basis: 45%;
+    padding: 4px;
+    text-decoration: none;
+}
+
+.nonmetal:hover {
+    color: #ffffff;
+    background-color: #008000;
+    border-color: #008000;
+    transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .nobleGas {
-    color: #0000ff;
-    border: 2px solid #0000ff;
+    color: #1d7dd6;
+    border: 2px solid #1d7dd6;
     border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+
+    box-sizing: unset;
+    flex-basis: 45%;
+    padding: 4px;
+    text-decoration: none;
+}
+.nobleGas:hover {
+    color: #ffffff;
+    background-color: #1d7dd6;
+    border-color: 2px solid #1d7dd6;
     transition: color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -97,12 +139,36 @@
     border: 2px solid #FFA500;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
+
+    box-sizing: unset;
+    flex-basis: 45%;
+    padding: 4px;
+    text-decoration: none;
+}
+
+.alkaliMetal:hover {
+    color: #000000;
+    background-color: #FFA500;
+    border-color:#FFA500;
+    transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .alkaliEarthMetal {
     color: #ffff00;
     border: 2px solid #ffff00;
     border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+
+    box-sizing: unset;
+    flex-basis: 45%;
+    padding: 4px;
+    text-decoration: none;
+}
+
+.alkaliEarthMetal:hover {
+    color: #000000;
+    border-color: #ffff00;
+    background-color: #ffff00;
     transition: color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -111,6 +177,18 @@
     border: 2px solid #ffffff;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
+
+    box-sizing: unset;
+    flex-basis: 45%;
+    padding: 4px;
+    text-decoration: none;
+}
+
+.metalloid:hover {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .transitionMetal {
@@ -118,18 +196,42 @@
     border: 2px solid #ff007f;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
+
+    box-sizing: unset;
+    flex-basis: 45%;
+    padding: 4px;
+    text-decoration: none;
 }
 
-.metal {
-    color: #03bb85;
-    border: 2px solid #03bb85;
-    border-radius: 10px;
+.transitionMetal:hover {
+    color: #ffffff;
+    background-color: #ff007f;
+    border-color: #ff007f;
     transition: color 0.15s ease, border-color 0.15s ease;
 }
 
+.metal,
 .postTrasitionMetal {
     color: #03bb85;
     border: 2px solid #03bb85;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
+
+    box-sizing: unset;
+    flex-basis: 45%;
+    padding: 4px;
+    text-decoration: none;
+}
+
+.metal:hover,
+.postTrasitionMetal:hover {
+    color: #ffffff;
+    background-color: #03bb85;
+    border-color: #03bb85;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.lanthanoid,
+.actnoid {
+    background-color: #ffffff;
 }

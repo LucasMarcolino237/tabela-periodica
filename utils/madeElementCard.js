@@ -6,8 +6,9 @@ function madeElementCard(element) {
     
     const { name, symbol, atomicNumber, atomicMass} = element;
     
-    let { groupBlock } = element
-    if (groupBlock === "halogen" && name === "Astatine") { groupBlock = "metalloid" }
+    let { groupBlock } = element;
+    if (groupBlock === "halogen" && name === "Astatine") { groupBlock = "metalloid" };
+    if (name === "Lawrencium") {groupBlock = "actinoid"};
 
     const group = groupBlock;
     const id = atomicNumber;
@@ -22,16 +23,12 @@ function madeElementCard(element) {
         56:styles.elementContainer56,
         88:styles.elementContainer88,
     };
-    
-    const currentCSS = (id) => {
-        if (css[`${id}`]) { return css[`${id}`] } else { return styles.elementContainer };
-    };
 
     const groupColor = {
         "nonmetal":styles.nonmetal,
+        "halogen":styles.nonmetal,
         "noble gas":styles.nobleGas,
         "alkali metal":styles.alkaliMetal,
-        "halogen":styles.nonmetal,
         "alkaline earth metal":styles.alkaliEarthMetal,
         "metalloid":styles.metalloid,
         "transition metal":styles.transitionMetal,
@@ -40,24 +37,22 @@ function madeElementCard(element) {
         "actinoid":styles.actnoid,
         "post-transition metal":styles.postTrasitionMetal,
 
-
     }
-
-    // return (<li> { element.name } </li>)
-    if (group === "lanthanoid" || group === "actinoid" || name === "Lawrencium") return; 
-
+    
+    const currentCSS = (id) => { if (css[`${id}`]) { return css[`${id}`] } else { return styles.elementContainer };};
     const currentGroupColor = (group) => {return groupColor[`${group}`]}
+
+    if (group === "lanthanoid" || group === "actinoid") return;  
+
     return (
         
         <Link href={`/table/${name}`}>
             <a  className={currentCSS(id)}>
                 <div className={currentGroupColor(group)}> 
-                    <div className={styles.elementCard}>
-                        <h4 className={styles.number}>{ atomicNumber }</h4>
-                        <h1 className={styles.symbol}>{ symbol }</h1>
-                        <spam className={styles.mass}>{ atomicMass }</spam>
-                        <h3 className={styles.name}>{ name }</h3>
-                    </div>
+                    <h4 className={styles.number}>{ atomicNumber }</h4>
+                    <h1 className={styles.symbol}>{ symbol }</h1>
+                    <spam className={styles.mass}>{ atomicMass }</spam>
+                    <p className={styles.name}>{ name }</p>
                 </div>
             </a>
         </Link>
