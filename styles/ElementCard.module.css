@@ -1,6 +1,4 @@
 .elementContainer {
-    padding: 4px;
-    margin: 0.2rem auto;
     position: relative;
     z-index: 1;
     cursor: default;
@@ -11,8 +9,6 @@
 
 .elementContainer2 {
     grid-column-start: -2;
-    padding: 4px;
-    margin: 0.2rem auto;
     position: relative;
     z-index: 1;
     cursor: default;
@@ -23,8 +19,6 @@
 
 .elementContainer3{
     grid-column-start: 1;
-    padding: 4px;
-    margin: 0.2rem auto;
     position: relative;
     z-index: 1;
     cursor: default;
@@ -36,8 +30,6 @@
 .elementContainer5,
 .elementContainer13 {
     grid-column-start: 13;
-    padding: 4px;
-    margin: 0.2rem auto;
     position: relative;
     z-index: 1;
     cursor: default;
@@ -49,8 +41,6 @@
 .elementContainer72,
 .elementContainer104 {
     grid-column-start: 4; 
-    padding: 4px;
-    margin: 0.2rem auto;
     position: relative;
     z-index: 1;
     cursor: default;
@@ -62,15 +52,46 @@
 .elementContainer56,
 .elementContainer88  {
     grid-column-start: 2;
-    padding: 4px;
-    margin: 0.2rem auto;
     position: relative;
     z-index: 1;
     cursor: default;
     transition: all 0.3s ease;
     width: 4.5rem;
     height:4.5rem;
-} 
+}
+
+.elementContainer89,
+.elementContainerLanthanoid {
+    /* grid-row-start: 9; */
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+    width: 4.5rem;
+    height:4.5rem;
+
+    display: grid;
+    align-items: center;
+}
+
+.elementContainer57,
+.elementContainerActinoid {
+    /* grid-row-start: 10; */
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    transition: all 0.3s ease;
+    width: 4.5rem;
+    height:4.5rem;
+
+    display: grid;
+    align-items: center;
+}
+
+/* .elementContainer57,
+.elementContainer89  {
+    grid-column-start: 4;
+} */
 
 .symbol {
     font: 700 1rem "Poppins", sans-serif;
@@ -232,6 +253,15 @@
 }
 
 .lanthanoid,
-.actnoid {
-    background-color: #ffffff;
+.actinoid,
+.groupBlock {
+    color: #381c38;
+    border: 2px solid #381c38;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+
+    box-sizing: unset;
+    flex-basis: 45%;
+    padding: 4px;
+    text-decoration: none;
 }

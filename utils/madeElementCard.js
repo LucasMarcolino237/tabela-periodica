@@ -21,7 +21,11 @@ function madeElementCard(element) {
         72:styles.elementContainer72,
         104:styles.elementContainer104,
         56:styles.elementContainer56,
+        57:styles.elementContainer57,
         88:styles.elementContainer88,
+        89:styles.elementContainer89,
+        "lanthanoid":styles.elementContainerLanthanoid,
+        "actinoid":styles.elementContainerActinoid,
     };
 
     const groupColor = {
@@ -34,29 +38,51 @@ function madeElementCard(element) {
         "transition metal":styles.transitionMetal,
         "metal":styles.metal,
         "lanthanoid":styles.lanthanoid,
-        "actinoid":styles.actnoid,
+        "actinoid":styles.actinoid,
         "post-transition metal":styles.postTrasitionMetal,
 
     }
     
-    const currentCSS = (id) => { if (css[`${id}`]) { return css[`${id}`] } else { return styles.elementContainer };};
+    const currentCSS = (key) => { if (css[`${key}`]) { return css[`${key}`] } else { return styles.elementContainer };};
     const currentGroupColor = (group) => {return groupColor[`${group}`]}
 
-    if (group === "lanthanoid" || group === "actinoid") return;  
-
-    return (
-        
-        <Link href={`/table/${name}`}>
-            <a  className={currentCSS(id)}>
-                <div className={currentGroupColor(group)}> 
-                    <h4 className={styles.number}>{ atomicNumber }</h4>
-                    <h1 className={styles.symbol}>{ symbol }</h1>
-                    <spam className={styles.mass}>{ atomicMass }</spam>
-                    <p className={styles.name}>{ name }</p>
+    if (group === "lanthanoid" || group === "actinoid") {
+        if  (id === "57" || id === "89") {
+            return (
+                <div className={currentCSS(Number(id))}> 
+                    <div className={styles.lanthanoid}>
+                        <h4 className={styles.symbol}>{ `${Number(id)} - ${Number(id)+14}` }</h4>
+                    </div>
                 </div>
-            </a>
-        </Link>
-            
-)};
+            )
+        }
+        // return (
+        //     <Link href={`/table/${name}`}>
+        //         <a  className={currentCSS(group)}>
+        //             <div className={currentGroupColor(group)}> 
+        //                 <h4 className={styles.number}>{ atomicNumber }</h4>
+        //                 <h1 className={styles.symbol}>{ symbol }</h1>
+        //                 <spam className={styles.mass}>{ atomicMass }</spam>
+        //                 <p className={styles.name}>{ name }</p>
+        //             </div>
+        //         </a>
+        //     </Link>
+        // )
+    } else {
+        return (
+            <Link href={`/table/${name}`}>
+                <a  className={currentCSS(id)}>
+                    <div className={currentGroupColor(group)}> 
+                        <h4 className={styles.number}>{ atomicNumber }</h4>
+                        <h1 className={styles.symbol}>{ symbol }</h1>
+                        <spam className={styles.mass}>{ atomicMass }</spam>
+                        <p className={styles.name}>{ name }</p>
+                    </div>
+                </a>
+            </Link>    
+        )
+    };
+}
+
 
 export default madeElementCard;
