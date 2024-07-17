@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { getElementBy, getAllElements } from '../../utils/table-info.js';
+// import { getElementBy, getAllElements } from '../../utils/table-info.js';
 
 function Element( { elementInfo = {} }) {
     const router = useRouter()
@@ -13,14 +13,14 @@ function Element( { elementInfo = {} }) {
                 <a>Home</a>
             </Link>
             <table border='1px solid black'>
-                <caption>{ elementInfo.name }</caption>
+                {/* <caption>{ elementInfo.name }</caption> */ <caption>Nome do elemento</caption>}
                 <tbody>
                     <tr>
                         <th>
                             Símbolo atômico
                         </th>
                         <td>
-                            { elementInfo.symbol }
+                            { elementInfo.simbolo }
                         </td>
                     </tr>
                     <tr>
@@ -28,7 +28,7 @@ function Element( { elementInfo = {} }) {
                             Número atômico
                         </th>
                         <td>
-                            { elementInfo.atomicNumber }
+                            { elementInfo.numero }
                         </td>
                     </tr>
                     <tr>
@@ -36,7 +36,7 @@ function Element( { elementInfo = {} }) {
                             Massa atômica
                         </th>
                         <td>
-                            { elementInfo.atomicMass }
+                            { elementInfo.massa }
                         </td>
                     </tr>
                 </tbody>

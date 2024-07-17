@@ -3,12 +3,12 @@ import styles from '../styles/Home.module.css';
 import { getAllElements } from '../utils/table-info.js';
 import madeElementCard from '../utils/madeElementCard';
 
-function Home({ periodicTable = {} } ) {
+function Home({ periodicTable = { } } ) {
     function showElements() {
         return (
             <section className={styles.grid}>
-
                 { periodicTable.map(element => { return madeElementCard(element) }) } 
+                {/* {console.log(periodicTable[0])} */}
 
             </section>
         )
@@ -64,8 +64,8 @@ function Home({ periodicTable = {} } ) {
     )
 };
 
-export async function getStaticProps(context) {
-    const data = await getAllElements();
+export function getStaticProps(context) {
+    const data = getAllElements();
 
     return {
         props: { periodicTable: data },

@@ -1,4 +1,5 @@
-import axios from "axios";
+// import axios from "axios";
+
 
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
@@ -6,29 +7,29 @@ String.prototype.capitalize = function() {
 
 module.exports = {
     
-    async getAllElements() {
-        const res = await axios.get('https://periodic-table-api.herokuapp.com/');
-        const elements = res.data;
+    getAllElements() {
+        const elements = require("./elements.json");
+        // const elements = res.data;
 
         return elements;
     },
     
-    async getElementBy(searchType, elementName) {
-        searchType = searchType.capitalize();
+    // async getElementBy(searchType, elementName) {
+    //     searchType = searchType.capitalize();
 
-        // const validSearchType = [
-        //     'Number',
-        //     'Name',
-        //     'Symbol',
-        //     'Bonding',
-        //     'Group',
-        //     'State',
-        // ]
+    //     // const validSearchType = [
+    //     //     'Number',
+    //     //     'Name',
+    //     //     'Symbol',
+    //     //     'Bonding',
+    //     //     'Group',
+    //     //     'State',
+    //     // ]
 
-        const res = await axios.get(`https://periodic-table-api.herokuapp.com/atomic${searchType}/${elementName}`);
-        const elementInfo = res.data;
+    //     const res = await axios.get(`https://periodic-table-api.herokuapp.com/atomic${searchType}/${elementName}`);
+    //     const elementInfo = res.data;
 
-        return elementInfo;
-    },
+    //     return elementInfo;
+    // },
 }
 
