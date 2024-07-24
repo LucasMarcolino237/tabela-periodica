@@ -1,35 +1,23 @@
-// import axios from "axios";
-
-
-String.prototype.capitalize = function() {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-}
 
 module.exports = {
     
-    getAllElements() {
-        const elements = require("./elements.json");
-        // const elements = res.data;
+    // Grupo de funções que realizam a busca e retornam as informações a serem utilizadas na tabela  
 
+    getAllElements() {
+        
+        const elements = require("./elements.json");
+        
         return elements;
     },
     
-    // async getElementBy(searchType, elementName) {
-    //     searchType = searchType.capitalize();
+    async getElementBy(elementNumber) {
+        
+        const elements = require("./elements.json");
+        let index = Number(elementNumber)-1
 
-    //     // const validSearchType = [
-    //     //     'Number',
-    //     //     'Name',
-    //     //     'Symbol',
-    //     //     'Bonding',
-    //     //     'Group',
-    //     //     'State',
-    //     // ]
-
-    //     const res = await axios.get(`https://periodic-table-api.herokuapp.com/atomic${searchType}/${elementName}`);
-    //     const elementInfo = res.data;
-
-    //     return elementInfo;
-    // },
+        const elementInfo = elements[index]
+        
+        return elementInfo;
+    },
 }
 

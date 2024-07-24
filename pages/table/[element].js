@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-// import { getElementBy, getAllElements } from '../../utils/table-info.js';
+import { getElementBy, getAllElements } from '../../utils/table-info.js';
 
 function Element( { elementInfo = {} }) {
     const router = useRouter()
@@ -13,7 +13,7 @@ function Element( { elementInfo = {} }) {
                 <a>Home</a>
             </Link>
             <table border='1px solid black'>
-                {/* <caption>{ elementInfo.name }</caption> */ <caption>Nome do elemento</caption>}
+                {<caption>{ elementInfo.nome }</caption>}
                 <tbody>
                     <tr>
                         <th>
@@ -45,7 +45,7 @@ function Element( { elementInfo = {} }) {
     );
 }
 export async function getStaticProps(context) {
-    const data = await getElementBy('name', context.params.element)
+    const data = await getElementBy(context.params.element)
 
     return {
         props: { elementInfo: data },
@@ -57,7 +57,7 @@ export async function getStaticPaths() {
 
     const paths = elements.map((element) => {
         
-        return { params: { element: String(element.name) } };
+        return { params: { element: String(element.numero) } };
     });
 
     return {

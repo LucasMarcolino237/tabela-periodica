@@ -8,7 +8,6 @@ function madeElementCard(element) {
     
     let { grupo } = element;
     if (grupo === "Halogênio" && nome === "Astato") { grupo = "Semimetal" };
-    // if (nome === "Laurêncio") {grupo = "Actinídeo"};
 
     const group = grupo;
     const id = numero;
@@ -56,21 +55,9 @@ function madeElementCard(element) {
                 </div>
             )
         }
-        // return ('
-        //     <Link href={`/table/${nome}`}>
-        //         <a  className={currentCSS(group)}>
-        //             <div className={currentGroupColor(group)}> 
-        //                 <h4 className={styles.number}>{ numero }</h4>
-        //                 <h1 className={styles.simbolo}>{ simbolo }</h1>
-        //                 <spam className={styles.mass}>{ massa }</spam>
-        //                 <p className={styles.nome}>{ nome }</p>
-        //             </div>
-        //         </a>
-        //     </Link>
-        // )
     } else {
         return (
-            <Link href={`/table/${nome}`}>
+            <Link href={`/table/${numero}`}>
                 <a  className={currentCSS(id)}>
                     <div className={currentGroupColor(group)}> 
                         <h4 className={styles.number}>{ numero }</h4>
