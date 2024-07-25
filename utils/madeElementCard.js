@@ -7,7 +7,6 @@ function madeElementCard(element) {
     const { nome, simbolo, numero, massa} = element;
     
     let { grupo } = element;
-    if (grupo === "Halogênio" && nome === "Astato") { grupo = "Semimetal" };
 
     const group = grupo;
     const id = numero;
@@ -29,7 +28,7 @@ function madeElementCard(element) {
 
     const groupColor = {
         "Não metal":styles.nonmetal,
-        "Halogênio":styles.nonmetal,
+        "Halogênio":styles.halogen,
         "Gás nobre":styles.nobleGas,
         "Metal alcalino":styles.alkaliMetal,
         "Metal alcalinoterroso":styles.alkaliEarthMetal,
@@ -49,8 +48,8 @@ function madeElementCard(element) {
         if  (id === 57 || id === 89) {
             return (
                 <div className={currentCSS(Number(id))}> 
-                    <div className={styles.lanthanoid}>
-                        <h4 className={styles.simbolo}>{ `${Number(id)} - ${Number(id)+14}` }</h4>
+                    <div className={currentGroupColor(group)}>
+                        {/* <h4 className={styles.simbolo}>{ `${Number(id)} - ${Number(id)+14}` }</h4> */}
                     </div>
                 </div>
             )

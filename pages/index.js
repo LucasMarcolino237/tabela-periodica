@@ -8,8 +8,6 @@ function Home({ periodicTable = { } } ) {
         return (
             <section className={styles.grid}>
                 { periodicTable.map(element => { return madeElementCard(element) }) } 
-                {/* {console.log(periodicTable[0])} */}
-
             </section>
         )
     };
@@ -39,15 +37,10 @@ function Home({ periodicTable = { } } ) {
         </header>
 
         <main className={styles.main}>
-            {/* <aside className={styles.code}>
-            <h1>props</h1>
-            <section className={styles.description}>
-                <p>description</p>
-            </section>
-            </aside> */}
             <article>
                 <h1 className={styles.title}>PERIODIC TABLE</h1>
                 <div>{ showElements() }</div>
+
             </article>
         </main>
 
